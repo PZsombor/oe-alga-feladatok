@@ -88,7 +88,7 @@ namespace OE.ALGA.Paradigmak
         }
     }
 
-    public class FuggoFeladatTarolo<T> : FeladatTarolo<T> where T : IVegrehajthato, IFuggo
+    public class FuggoFeladatTarolo<T> : FeladatTarolo<T> where T : IVegrehajthato, IFuggo, IEnumerable
     {
         public FuggoFeladatTarolo(int meret) : base(meret)
         {
@@ -106,7 +106,7 @@ namespace OE.ALGA.Paradigmak
         }
     }
 
-    public class FeladatTaroloBejaro<T> where T : IVegrehajthato
+    public class FeladatTaroloBejaro<T> where T : IVegrehajthato, IEnumerator
     {
         public T[] tarolo;
         public int n;
@@ -121,7 +121,7 @@ namespace OE.ALGA.Paradigmak
 
         public void Current()
         {
-
+            
         }
 
         public bool MoveNext()
